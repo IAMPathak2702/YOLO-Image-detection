@@ -95,8 +95,8 @@ while True:
                 cv2.line(img , (limitsDown[0],limitsDown[1]),(limitsDown[2],limitsDown[3]),(0,255,0),3)
     
     
-    cvzone.putTextRect(img,str(len(totalCountUp)),(929,345),cv2.FONT_HERSHEY_PLAIN,5,(139,195,75),7)
-    cvzone.putTextRect(img,str(len(totalCountDown)),(1191,345),cv2.FONT_HERSHEY_PLAIN,5,(50,50,230),7)           
+    cvzone.putTextRect(img , f'Count Up:{len(totalCountUp)} Down :{len(totalCountDown)}',(50,50))           
+           
     cv2.imshow("image",img)
     # cv2.imshow("mask",imgRegion)
     if cv2.waitKey(1) == ord('q'):
